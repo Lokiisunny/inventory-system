@@ -1,0 +1,23 @@
+services:
+  # 1. Backend Web Service (Containerized FastAPI)
+  - type: web
+    name: inventory-backend
+    env: docker
+    dockerContext: ./backend
+    dockerfilePath: Dockerfile
+    plan: free
+    region: oregon # Render free tier region
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: inventory-db
+          property: connectionString
+      - key: CORS_ORIGINS
+        value: "*" # Update this with the deployed Vercel frontend URL once available
+
+databases:
+  # 2. Managed PostgreSQL Database
+  - name: inventory-db
+    plan: free
+    region: oregon
+    postgresVersion: 16

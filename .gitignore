@@ -1,0 +1,26 @@
+# Python virtual environments & caches
+backend/venv/
+backend/env/
+backend/__pycache__/
+backend/*.pyc
+backend/*.pyo
+backend/*.pyd
+backend/.pytest_cache/
+backend/inventory.db
+backend/*.sqlite
+
+# Node modules & build files
+frontend/node_modules/
+frontend/dist/
+frontend/.eslintcache
+
+# Environment configurations
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Operating System files
+.DS_Store
+Thumbs.db
