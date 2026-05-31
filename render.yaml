@@ -20,4 +20,3 @@ databases:
   - name: inventory-db
     plan: free
     region: oregon
-    postgresVersion: 16
