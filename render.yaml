@@ -4,7 +4,7 @@ services:
     name: inventory-backend
     env: docker
     dockerContext: ./backend
-    dockerfilePath: Dockerfile
+    dockerfilePath: backend/Dockerfile
     plan: free
     region: oregon # Render free tier region
     envVars:
